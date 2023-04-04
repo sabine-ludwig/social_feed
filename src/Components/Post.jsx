@@ -12,3 +12,20 @@
 // This will require some creative thinking and problem-solving. Be sure to review 
 // the Changing Styles on Button Click demo video for more information about how 
 // to approach this user story!
+
+import CreatePostForm from "./CreatePostForm";
+
+const Post = (props) => {
+    return (
+        <div>
+        <div>{props.author}</div>
+        <div>{props.content}</div>
+        <div>
+            <button>like</button>
+            <button>dislike</button>
+        </div>
+      </div>
+      );
+}
+ 
+export default Post;

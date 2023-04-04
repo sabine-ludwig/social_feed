@@ -6,3 +6,22 @@
 // values to a function on the App.jsx component. That function should create a new 
 // post object, add it to the existing array of posts, and update the App.js 
 // state variable with the new array.
+
+const CreatePostForm = (props) => {
+    return (
+        <form>
+            <input
+            type='text'
+            placeholder='Enter your name'
+            value={author}
+           />
+           <textarea
+           placeholder="What's on your mind?"
+           value={content}
+           />
+           <button>Create</button>
+        </form>
+      );
+}
+ 
+export default CreatePostForm;
