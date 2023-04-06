@@ -16,6 +16,7 @@
 // import CreatePostForm from "./CreatePostForm";
 
 import React, {useState} from 'react';
+import './Posts.css'
 
 const Post = (props) => {
 
@@ -41,16 +42,16 @@ const Post = (props) => {
     }
 
     return (
-        <section key={props.key}>
-            <div>
-                <h3>{props.entry.userName}</h3>
+        <section key={props.key} className="container-feed">
+            <div className="post-feed">
+                <p>{props.entry.userName}</p>
+            </div>
+            <div className="post-feed">
+                <p>Post: {props.entry.post}</p>
             </div>
             <div>
-                <h3>Post: {props.entry.post}</h3>
-            </div>
-            <div>
-                <button onClick={handleLikeClick}>Like</button>
-                <button onClick={handleDislikeClick}>Dislike</button>
+                <button className={'like-button ${like}'} onClick={handleLikeClick}>Like</button>
+                <button className={'dislike-button ${dislike}'} onClick={handleDislikeClick}>Dislike</button>
             </div>
         </section>
       );

@@ -1,0 +1,43 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:normal;
+    border: 2px solid lavender;
+    margin: .5em;
+    padding: 3px;
+    background-color: lavender;
+}
+
+input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: .5em;
+    text-align: left;
+    border-color: lavender;
+    border-radius: 1px;
+}
+
+.post {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 15px;
+    word-wrap: break-word;
+    text-align: justify;
+    width: 500px;
+}
+
+.submit-button {
+    color: white;
+    padding: 15px 12 px;
+    text-align: center;
+    display: right;
+    background-color: #bcbcf2;
+    font-weight: bold;
+    margin-top: 1em;
+}

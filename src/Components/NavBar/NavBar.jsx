@@ -1,7 +1,9 @@
+import './NavBar.css'
+
 const NavBar = (props) => {
     return (
-        <nav>
-            <h1>SocialFeed</h1>
+        <nav className="title">
+            <h1 className='header'> SocialFeed</h1>
         </nav>
       );
 }

@@ -1,11 +1,12 @@
+import './App.css';
 import React, { useState } from 'react';
-import PostList from './Components/PostList';
+import PostList from './Components/Posts/PostList';
 import NavBar from './Components/NavBar/NavBar';
-import CreatePostForm from './Components/CreatePostForm';
+import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 
 function App() {
 
-  const [entries, Setentries] = useState([{userName: 'Sabine', Post: 'I like to code'}])
+  const [entries, Setentries] = useState([{userName: 'Sabine', post: 'I like to code'}])
 
 
   function newPost(post) {

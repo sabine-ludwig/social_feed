@@ -1,0 +1,45 @@
+.container-feed {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: normal;
+    margin: .5em;
+    padding: 1px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 1px;
+    width: 100%;
+    background-color: lavender;
+}
+
+.post-feed {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    word-wrap: break-word;
+    text-align: justify;
+    width: 900px;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: grey;
+    margin-right: 5px;
+  }
+  
+  .dislike-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: grey;
+  }
+  
+  .like-button.active {
+    color: green;
+  }
+  
+  .dislike-button.active {
+    color: red;
+  }
