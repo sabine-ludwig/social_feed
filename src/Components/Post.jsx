@@ -13,19 +13,49 @@
 // the Changing Styles on Button Click demo video for more information about how 
 // to approach this user story!
 
-import CreatePostForm from "./CreatePostForm";
+// import CreatePostForm from "./CreatePostForm";
+
+import React, {useState} from 'react';
 
 const Post = (props) => {
+
+    const[like, setLike] = useState('inactive')
+    const[dislike, setDislike] = useState('inactive')
+
+    function handleLikeClick() {
+        if (like === 'inactive') {
+            setLike('active')
+        }
+        if (dislike === 'active') {
+            setDislike('inactive')
+        }
+    }
+
+    function handleDislikeClick() {
+        if (dislike === 'inactive') {
+            setDislike('active')
+        }
+        if (like === 'active') {
+            setLike('inactive')
+        }
+    }
+
     return (
-        <div>
-        <div>{props.author}</div>
-        <div>{props.content}</div>
-        <div>
-            <button>like</button>
-            <button>dislike</button>
-        </div>
-      </div>
+        <section key={props.key}>
+            <div>
+                <h3>{props.entry.userName}</h3>
+            </div>
+            <div>
+                <h3>Post: {props.entry.post}</h3>
+            </div>
+            <div>
+                <button onClick={handleLikeClick}>Like</button>
+                <button onClick={handleDislikeClick}>Dislike</button>
+            </div>
+        </section>
       );
 }
  
 export default Post;
+
+  

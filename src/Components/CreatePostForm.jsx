@@ -7,19 +7,37 @@
 // post object, add it to the existing array of posts, and update the App.js 
 // state variable with the new array.
 
+import React, {useState} from "react";
+
 const CreatePostForm = (props) => {
+
+    const [userName, setUsername] = useState('')
+    const [post, setPost] = useState('')
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        let newPost = {
+            userName: userName,
+            post: post
+        };
+        props.newPost(newPost);
+
+        setUsername('');
+        setPost('');
+    }
+
     return (
-        <form>
-            <input
-            type='text'
-            placeholder='Enter your name'
-            value={author}
-           />
-           <textarea
-           placeholder="What's on your mind?"
-           value={content}
-           />
-           <button>Create</button>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="Username" value={userName} onChange={(event) => setUsername(event.target.value)}/>
+            </div>
+            <div>
+                <label for="post">What's on your mind...</label>
+                <textarea id="post" rows="3" value={post} onChange={(event) => setPost(event.target.value)}/>
+            <button type="submit">Post</button>
+            </div>
+           
         </form>
       );
 }

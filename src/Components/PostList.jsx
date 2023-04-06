@@ -8,9 +8,7 @@ import Post from './Post'
 const PostList = (props) => {
     return (
         <div>
-            {props.parentPosts.map((post, index) => (
-            <PostList key={index} name={post.author} post={post.content} />
-            ))
+            {props.entries.map((entry, index) => <Post entry={entry} key={index}/>)
             .reverse()}
         </div>
      );
